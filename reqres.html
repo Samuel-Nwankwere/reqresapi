@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="reqres.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tbl_container">
+            <div class="header">
+                <h2>Home page <button type="menu"><a href="page2.html">Next</a></button></h2>
+            </div>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                        <th><span style="color: rgba(255, 0, 0, 0.86);">Delete</span></th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Rows will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="bg-modal" id="myModal">
+        <div class="modal-content">
+            <div class="close" onclick="closeModal()">+</div>
+            <img src="" alt="" id="userAvatar" style="width: 100px; border-radius: 50%; margin-bottom: 15px;">
+            <form>
+                <input type="text" placeholder="First Name" id="userName">
+                <input type="text" placeholder="Last Name" id="userLname">
+                <input type="email" placeholder="E-mail" id="userEmail">
+                <br>
+                <button class="button" id="saveBtn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="del-modal" id="delModal">
+        <div class="del-content">
+            <div class="remove" onclick="closeDeleteModal()">+</div>
+            <div>Do You Want To Do This?</div>
+            <p>Note: it can't be undone</p>
+            <button id="confirmDeleteBtn">Yes, Delete</button>
+        </div>
+    </div>
+
+    <script src="reqres.js">
+       
+    </script>
+</body>
+
+</html>
